@@ -1,349 +1,78 @@
-[debug] [2018-09-18T11:37:58.196Z] ----------------------------------------------------------------------
-[debug] [2018-09-18T11:37:58.199Z] Command:       /usr/bin/node /usr/bin/firebase serve
-[debug] [2018-09-18T11:37:58.199Z] CLI Version:   4.2.1
-[debug] [2018-09-18T11:37:58.199Z] Platform:      linux
-[debug] [2018-09-18T11:37:58.199Z] Node Version:  v8.12.0
-[debug] [2018-09-18T11:37:58.199Z] Time:          Tue Sep 18 2018 19:37:58 GMT+0800 (WITA)
-[debug] [2018-09-18T11:37:58.199Z] ----------------------------------------------------------------------
+[debug] [2018-09-18T15:04:53.433Z] ----------------------------------------------------------------------
+[debug] [2018-09-18T15:04:53.436Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2018-09-18T15:04:53.437Z] CLI Version:   4.2.1
+[debug] [2018-09-18T15:04:53.437Z] Platform:      linux
+[debug] [2018-09-18T15:04:53.437Z] Node Version:  v8.12.0
+[debug] [2018-09-18T15:04:53.437Z] Time:          Tue Sep 18 2018 23:04:53 GMT+0800 (WITA)
+[debug] [2018-09-18T15:04:53.437Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-09-18T11:37:58.207Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-09-18T11:37:58.208Z] > authorizing via signed-in user
-[debug] [2018-09-18T11:37:58.209Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mksrobotics  
+[debug] [2018-09-18T15:04:53.446Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-18T15:04:53.446Z] > authorizing via signed-in user
+[debug] [2018-09-18T15:04:53.448Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-18T15:04:53.448Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-09-18T15:04:53.667Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-18T15:04:53.674Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mksrobotics  
  
-[debug] [2018-09-18T11:38:03.002Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-18T11:38:03.003Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mksrobotics  
+[debug] [2018-09-18T15:04:55.388Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-18T15:04:55.389Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mksrobotics  
  
-[debug] [2018-09-18T11:38:04.322Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-18T15:04:57.628Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/home/adnansurya/Documents/PROJECTS/web_mksrobotics'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2018-09-18T11:38:04.724Z] Fetching environment
-[debug] [2018-09-18T11:38:04.726Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418:getServerAppConfig  
+[debug] [2018-09-18T15:04:58.145Z] Fetching environment
+[debug] [2018-09-18T15:04:58.307Z] Error: EACCES: permission denied, open '/home/adnansurya/.config/gcloud/application_default_credentials.json'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.writeFileSync (fs.js:1299:33)
+    at module.exports (/usr/lib/node_modules/firebase-tools/lib/ensureDefaultCredentials.js:44:6)
+    at FunctionsEmulator.start (/usr/lib/node_modules/firebase-tools/lib/functionsEmulator.js:118:3)
+    at Object.start (/usr/lib/node_modules/firebase-tools/lib/serve/functions.js:9:29)
+    at /usr/lib/node_modules/firebase-tools/lib/serve/index.js:17:21
+    at arrayMap (/usr/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:639:23)
+    at Function.map (/usr/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9556:14)
+    at _serve (/usr/lib/node_modules/firebase-tools/lib/serve/index.js:15:7)
+    at Command._action (/usr/lib/node_modules/firebase-tools/commands/serve.js:48:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-09-18T15:05:05.696Z] ----------------------------------------------------------------------
+[debug] [2018-09-18T15:05:05.698Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2018-09-18T15:05:05.698Z] CLI Version:   4.2.1
+[debug] [2018-09-18T15:05:05.698Z] Platform:      linux
+[debug] [2018-09-18T15:05:05.698Z] Node Version:  v8.12.0
+[debug] [2018-09-18T15:05:05.698Z] Time:          Tue Sep 18 2018 23:05:05 GMT+0800 (WITA)
+[debug] [2018-09-18T15:05:05.698Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-18T15:05:05.706Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-18T15:05:05.707Z] > authorizing via signed-in user
+[debug] [2018-09-18T15:05:05.708Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mksrobotics  
  
-[debug] [2018-09-18T11:38:04.726Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418/clients/_:getWebAppConfig  
+[debug] [2018-09-18T15:05:09.098Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-18T15:05:09.100Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mksrobotics  
  
-[debug] [2018-09-18T11:38:06.654Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-18T11:38:06.655Z] Starting @google-cloud/functions-emulator
-[debug] [2018-09-18T11:38:06.790Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-18T15:05:13.959Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/adnansurya/Documents/PROJECTS/web_mksrobotics'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-18T15:05:14.398Z] Fetching environment
+[debug] [2018-09-18T15:05:14.400Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418:getServerAppConfig  
+ 
+[debug] [2018-09-18T15:05:14.401Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418/clients/_:getWebAppConfig  
+ 
+[debug] [2018-09-18T15:05:15.985Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-18T15:05:15.985Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-18T15:05:16.125Z] <<< HTTP RESPONSE 200
 [info] i  hosting[mksrobotics]: Serving hosting files from: public
 [info] ✔  hosting[mksrobotics]: Local server: http://localhost:5000
-[debug] [2018-09-18T11:38:08.187Z] Parsing function triggers
+[debug] [2018-09-18T15:05:17.517Z] Parsing function triggers
 [info] ✔  functions: apps: http://localhost:5001/mksrobotics/us-central1/apps
-[info] [hosting] Rewriting / to local function apps
-[info] [hosting] Rewriting /chart.html to local function apps
-[info] [hosting] Rewriting / to local function apps
-[info] [hosting] Rewriting / to local function apps
-[info] [hosting] Rewriting /admin to local function apps
-[info] [hosting] Rewriting /admin/kategori to local function apps
-[info] [hosting] Rewriting /admin/css/font-face.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/font-awesome-5/css/fontawesome-all.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/font-awesome-4.7/css/font-awesome.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/mdi-font/css/material-design-iconic-font.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/animate.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/css-hamburgers/hamburgers.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.css to local function apps
-[info] [hosting] Rewriting /admin/css/theme.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/jquery-3.2.1.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /admin/js/main.js to local function apps
-[info] [hosting] Rewriting /admin/images/icon/logo.png to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-06.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-04.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-05.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-01.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-02.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-03.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/bg-title-01.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/bg-title-02.jpg to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /admin/js/main.js to local function apps
-[info] [hosting] Rewriting /admin/kategori to local function apps
-[info] [hosting] Rewriting /admin/css/font-face.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/font-awesome-5/css/fontawesome-all.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/font-awesome-4.7/css/font-awesome.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/mdi-font/css/material-design-iconic-font.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/animate.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/css-hamburgers/hamburgers.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.css to local function apps
-[info] [hosting] Rewriting /admin/css/theme.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/jquery-3.2.1.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /admin/js/main.js to local function apps
-[info] [hosting] Rewriting /admin/images/icon/logo.png to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-06.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-04.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-05.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-01.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-02.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-03.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/bg-title-01.jpg to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /admin/images/bg-title-02.jpg to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /admin/js/main.js to local function apps
-[info] [hosting] Rewriting /admin/kategori to local function apps
-[info] [hosting] Rewriting /admin to local function apps
-[info] [hosting] Rewriting /admin/kategori to local function apps
-[info] [hosting] Rewriting /admin/css/font-face.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/font-awesome-5/css/fontawesome-all.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/font-awesome-4.7/css/font-awesome.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/mdi-font/css/material-design-iconic-font.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/animate.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/css-hamburgers/hamburgers.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.css to local function apps
-[info] [hosting] Rewriting /admin/css/theme.css to local function apps
-[info] [hosting] Rewriting /admin/vendor/jquery-3.2.1.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /admin/js/main.js to local function apps
-[info] [hosting] Rewriting /admin/images/icon/logo.png to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-06.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-04.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-05.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-01.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-02.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/icon/avatar-03.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/bg-title-01.jpg to local function apps
-[info] [hosting] Rewriting /admin/images/bg-title-02.jpg to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /admin/vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /admin/js/main.js to local function apps
-[info] [hosting] Rewriting /admin/kategori to local function apps
-[info] [hosting] Rewriting /admin/kategori to local function apps
-[info] [hosting] Rewriting /admin/kategori to local function apps
-[info] [hosting] Rewriting / to local function apps
-[info] [hosting] Rewriting /admin to local function apps
-[info] [hosting] Rewriting /admin to local function apps
-[info] [hosting] Rewriting /css/font-face.css to local function apps
-[info] [hosting] Rewriting /vendor/font-awesome-4.7/css/font-awesome.min.css to local function apps
-[info] [hosting] Rewriting /vendor/font-awesome-5/css/fontawesome-all.min.css to local function apps
-[info] [hosting] Rewriting /vendor/mdi-font/css/material-design-iconic-font.min.css to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/bootstrap.min.css to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.css to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css to local function apps
-[info] [hosting] Rewriting /vendor/wow/animate.css to local function apps
-[info] [hosting] Rewriting /vendor/css-hamburgers/hamburgers.min.css to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.css to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.css to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.css to local function apps
-[info] [hosting] Rewriting /css/theme.css to local function apps
-[info] [hosting] Rewriting /vendor/jquery-3.2.1.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /js/main.js to local function apps
-[info] [hosting] Rewriting /images/icon/logo.png to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-06.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-04.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-05.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-01.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-02.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-03.jpg to local function apps
-[info] [hosting] Rewriting /images/bg-title-01.jpg to local function apps
-[info] [hosting] Rewriting /images/bg-title-02.jpg to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /js/main.js to local function apps
-[info] [hosting] Rewriting /admin to local function apps
-[info] [hosting] Rewriting /css/font-face.css to local function apps
-[info] [hosting] Rewriting /vendor/font-awesome-4.7/css/font-awesome.min.css to local function apps
-[info] [hosting] Rewriting /vendor/font-awesome-5/css/fontawesome-all.min.css to local function apps
-[info] [hosting] Rewriting /vendor/mdi-font/css/material-design-iconic-font.min.css to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/bootstrap.min.css to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.css to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css to local function apps
-[info] [hosting] Rewriting /vendor/wow/animate.css to local function apps
-[info] [hosting] Rewriting /vendor/css-hamburgers/hamburgers.min.css to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.css to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.css to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.css to local function apps
-[info] [hosting] Rewriting /css/theme.css to local function apps
-[info] [hosting] Rewriting /vendor/jquery-3.2.1.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /js/main.js to local function apps
-[info] [hosting] Rewriting /images/icon/logo.png to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-06.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-04.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-05.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-01.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-02.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-03.jpg to local function apps
-[info] [hosting] Rewriting /images/bg-title-01.jpg to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /images/bg-title-02.jpg to local function apps
-[info] [hosting] Rewriting /vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /js/main.js to local function apps
-[info] [hosting] Rewriting / to local function apps
-[info] [hosting] Rewriting /admin to local function apps
-[info] [hosting] Rewriting /css/font-face.css to local function apps
-[info] [hosting] Rewriting /vendor/font-awesome-4.7/css/font-awesome.min.css to local function apps
-[info] [hosting] Rewriting /vendor/font-awesome-5/css/fontawesome-all.min.css to local function apps
-[info] [hosting] Rewriting /vendor/mdi-font/css/material-design-iconic-font.min.css to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/bootstrap.min.css to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.css to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css to local function apps
-[info] [hosting] Rewriting /vendor/wow/animate.css to local function apps
-[info] [hosting] Rewriting /vendor/css-hamburgers/hamburgers.min.css to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.css to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.css to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.css to local function apps
-[info] [hosting] Rewriting /css/theme.css to local function apps
-[info] [hosting] Rewriting /vendor/jquery-3.2.1.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /js/main.js to local function apps
-[info] [hosting] Rewriting /images/icon/logo.png to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-06.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-04.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-05.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-01.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-02.jpg to local function apps
-[info] [hosting] Rewriting /images/icon/avatar-03.jpg to local function apps
-[info] [hosting] Rewriting /images/bg-title-01.jpg to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/popper.min.js to local function apps
-[info] [hosting] Rewriting /images/bg-title-02.jpg to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-4.1/bootstrap.min.js to local function apps
-[info] [hosting] Rewriting /vendor/slick/slick.min.js to local function apps
-[info] [hosting] Rewriting /vendor/wow/wow.min.js to local function apps
-[info] [hosting] Rewriting /vendor/animsition/animsition.min.js to local function apps
-[info] [hosting] Rewriting /vendor/bootstrap-progressbar/bootstrap-progressbar.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.waypoints.min.js to local function apps
-[info] [hosting] Rewriting /vendor/counter-up/jquery.counterup.min.js to local function apps
-[info] [hosting] Rewriting /vendor/circle-progress/circle-progress.min.js to local function apps
-[info] [hosting] Rewriting /vendor/perfect-scrollbar/perfect-scrollbar.js to local function apps
-[info] [hosting] Rewriting /vendor/chartjs/Chart.bundle.min.js to local function apps
-[info] [hosting] Rewriting /vendor/select2/select2.min.js to local function apps
-[info] [hosting] Rewriting /js/main.js to local function apps
-[info] [hosting] Rewriting /admin/a to local function apps
-[info] [hosting] Rewriting /admin/ to local function apps
-[info] [hosting] Rewriting /admin/dashboard to local function apps
-[info] [hosting] Rewriting /admin/ to local function apps
-[info] [hosting] Rewriting /admin/dashboard to local function apps
-[info] [hosting] Rewriting /admin/form.html to local function apps
-[info] [hosting] Rewriting /admin/dashboard to local function apps
+[info] [hosting] Rewriting /admin/blank to local function apps
+[info] [hosting] Rewriting /favicon.ico to local function apps
+[info] [hosting] Rewriting /favicon.ico to local function apps
+[info] [hosting] Rewriting /admin/blank to local function apps
+[info] [hosting] Rewriting /admin/blank to local function apps
+[info] [hosting] Rewriting /admin/blank to local function apps
+[info] [hosting] Rewriting /admin/blank to local function apps
+[info] [hosting] Rewriting /admin/blank to local function apps

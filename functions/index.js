@@ -19,7 +19,11 @@ app.get('/admin/dashboard', function(req,res) {
 });
 
 app.get('/admin/', function(req,res) {
-  res.redirect('/admin/dashboard');
+  res.redirect('/admin/blank');
+});
+
+app.get('/admin/blank', function(req,res) {
+  res.render('admin/blank');
 });
 
 
