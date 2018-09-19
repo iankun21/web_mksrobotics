@@ -286,3 +286,95 @@
 [info] [hosting] Rewriting /admin/kategori to local function apps
 [info] [hosting] Rewriting /admin/kategori to local function apps
 [info] [hosting] Rewriting /admin/kategori to local function apps
+[debug] [2018-09-19T01:54:33.547Z] ----------------------------------------------------------------------
+[debug] [2018-09-19T01:54:33.549Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2018-09-19T01:54:33.550Z] CLI Version:   4.2.1
+[debug] [2018-09-19T01:54:33.550Z] Platform:      linux
+[debug] [2018-09-19T01:54:33.550Z] Node Version:  v8.12.0
+[debug] [2018-09-19T01:54:33.550Z] Time:          Wed Sep 19 2018 09:54:33 GMT+0800 (WITA)
+[debug] [2018-09-19T01:54:33.550Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-19T01:54:33.559Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-19T01:54:33.559Z] > authorizing via signed-in user
+[debug] [2018-09-19T01:54:33.561Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-19T01:54:33.561Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-09-19T01:54:33.804Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-19T01:54:33.811Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mksrobotics  
+ 
+[debug] [2018-09-19T01:54:35.159Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-19T01:54:35.163Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mksrobotics  
+ 
+[debug] [2018-09-19T01:54:36.547Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/adnansurya/Documents/PROJECTS/web_mksrobotics'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-19T01:54:37.111Z] Fetching environment
+[debug] [2018-09-19T01:54:37.113Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418:getServerAppConfig  
+ 
+[debug] [2018-09-19T01:54:37.114Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418/clients/_:getWebAppConfig  
+ 
+[debug] [2018-09-19T01:54:37.583Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-19T01:54:37.584Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-19T01:54:37.704Z] <<< HTTP RESPONSE 200
+[info] i  hosting[mksrobotics]: Serving hosting files from: public
+[info] ✔  hosting[mksrobotics]: Local server: http://localhost:5000
+[debug] [2018-09-19T01:54:38.608Z] Parsing function triggers
+[info] ✔  functions: apps: http://localhost:5001/mksrobotics/us-central1/apps
+[info] [hosting] Rewriting / to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /favicon.ico to local function apps
+[info] [hosting] Rewriting /favicon.ico to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps
+[info] [hosting] Rewriting /admin/kategori to local function apps

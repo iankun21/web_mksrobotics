@@ -33,5 +33,14 @@ app.get('/admin/kategori', function(req,res) {
   res.render('admin/kategori', {title:'Kategori'});
 });
 
+app.post('/admin/kategori/edit', function(req, res) {
+  var id_kategori = req.param('id');
+  var nama_kategori = req.param('nama');
+  var kode_kategori = req.param('kode');
+  var detail_kategori = req.param('detail');
+
+  res.send(id_kategori + ' ' + nama_kategori + ' ' + kode_kategori);
+});
+
 
 exports.apps = functions.https.onRequest(app);

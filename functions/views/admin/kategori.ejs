@@ -44,18 +44,19 @@
           									<div class="card-header">
           										<i class="mr-2 fa fa-list"></i>
           										<strong class="card-title">Daftar Kategori</strong>
-                              <button type="button" class="btn btn-sm btn-secondary mb-1 float-right" data-toggle="modal" data-target="#tambahModal">
+                              <button @click="resetModal()"type="button" class="btn btn-sm btn-secondary mb-1 float-right" data-toggle="modal" data-target="#tambahModal">
   								              <i class="fa fa-plus"></i>&nbsp; Tambah Baru
           										</button>
           									</div>
           									<div class="card-body">
                               <div class="table-responsive m-b-40">
-                                  <table class="table table-borderless table-data3">
+                                  <table id="tableKategori" class="table table-borderless table-data3">
                                       <thead>
                                           <tr>
                                               <th>Kode</th>
                                               <th>Nama</th>
                                               <th>Detail</th>
+                                              <th>Action</th>
                                           </tr>
                                       </thead>
                                       <tbody>
@@ -63,6 +64,15 @@
                                               <td>{{data.kode_kategori}}</td>
                                               <td>{{data.nama_kategori}}</td>
                                               <td>{{data.detail_kategori}}</td>
+                                              <td>
+                                                <button @click="loadModal(data)" type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#editModal">
+                                                  <i class="fa fa-edit"></i>&nbsp; Edit
+                                                </button>
+                                                <button @click="loadModal(data)" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#hapusModal">
+                                                  <i class="fa fa-times"></i>&nbsp; Hapus
+                                                </button>
+
+                                              </td>
 
                                           </tr>
 
@@ -79,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <!-- modal medium -->
+            <!-- modal tambah -->
             <!-- ***modal ditaruh diluar main content agar layernya di atas main content*** -->
             <div class="modal fade" id="tambahModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg" role="document">
@@ -94,15 +104,15 @@
                     <form action="" method="post">
                       <div class="form-group">
                           <label for="nama" class=" form-control-label">Nama Kategori</label>
-                          <input v-model="nama" type="text" id="nama" placeholder="Masukkan Nama Kategori" class="form-control">
+                          <input v-model="modal.nama" type="text" id="nama" placeholder="Masukkan Nama Kategori" class="form-control">
                       </div>
                       <div class="form-group">
                           <label for="kode" class=" form-control-label">Kode Kategori</label>
-                          <input v-model="kode" type="text" id="kode" placeholder="Masukkan Kode Kategori" class="form-control">
+                          <input v-model="modal.kode" type="text" id="kode" placeholder="Masukkan Kode Kategori" class="form-control">
                       </div>
                       <div class="form-group">
                         <label for="textarea-input" class=" form-control-label">Detail Kategori</label>
-                        <textarea v-model="detail" name="textarea-input" id="textarea-input" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
+                        <textarea v-model="modal.detail" name="textarea-input" id="textarea-input" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
                       </div>
                       <div>
                         <button @click="addKategori" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Confirm</button>
@@ -116,37 +126,151 @@
                 </div>
               </div>
             </div>
-            <!-- end modal medium -->
+            <!-- end modal tambah -->
+            <!-- modal edit -->
+            <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="mediumModalLabel">Edit Kategori</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="" method="post">
+                      <div class="form-group">
+                          <label for="nama" class=" form-control-label">Nama Kategori</label>
+                          <input v-model="modal.nama" type="text" id="nama" placeholder="Masukkan Nama Kategori" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <label for="kode" class=" form-control-label">Kode Kategori</label>
+                          <input v-model="modal.kode" type="text" id="kode" placeholder="Masukkan Kode Kategori" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="textarea-input" class=" form-control-label">Detail Kategori</label>
+                        <textarea v-model="modal.detail" name="textarea-input" id="textarea-input" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
+                      </div>
+                      <div>
+                        <button @click="updateKategori(modal.id)" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Confirm</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button  type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end modal edit -->
+            <!-- modal hapus -->
+      			<div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+      				<div class="modal-dialog modal-lg" role="document">
+      					<div class="modal-content">
+      						<div class="modal-header">
+      							<h5 class="modal-title" id="mediumModalLabel">Hapus Kategori</h5>
+      							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      								<span aria-hidden="true">&times;</span>
+      							</button>
+      						</div>
+      						<div class="modal-body">
+                    <div class="row form-group">
+                       <div class="col col-md-3">
+                           <label class=" form-control-label">Nama Kategori</label>
+                       </div>
+                       <div class="col-12 col-md-9">
+                           <p class="form-control-static">{{modal.nama}}</p>
+                       </div>
+                     </div>
+                     <div class="row form-group">
+                        <div class="col col-md-3">
+                            <label class=" form-control-label">Kode Kategori</label>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <p class="form-control-static">{{modal.kode}}</p>
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                         <div class="col col-md-3">
+                             <label class=" form-control-label">Detail</label>
+                         </div>
+                         <div class="col-12 col-md-9">
+                             <p class="form-control-static">{{modal.detail}}</p>
+                         </div>
+                       </div>
+		              </div>
+      						<div class="modal-footer">
+      							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      							<button @click="deleteKategori(modal.id)" data-dismiss="modal" type="button" class="btn btn-primary">Confirm</button>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      			<!-- end modal hapus -->
         </div>
 
     </div>
 
   <%- include('global/js'); -%>
+
+
+
+  <!-- start vue app -->
   <script type="text/javascript">
     var app = new Vue({
       el: '#app',
       data: {
-        nama: '',
-        kode: '',
-        detail: ''
+        modal : {
+          id: '',
+          nama: '',
+          kode: '',
+          detail: ''
+        }
+
       },
       firebase: {
         kategori: db.ref('kategori')
       },
       methods: {
+        resetModal(){
+          this.modal.id='';
+          this.modal.nama = '';
+          this.modal.kode = '';
+          this.modal.detail = '';
+        },
         addKategori () {
           this.$firebaseRefs.kategori.push({
-            nama_kategori: this.nama,
-            kode_kategori: this.kode,
-            detail_kategori: this.detail
+            nama_kategori: this.modal.nama,
+            kode_kategori: this.modal.kode,
+            detail_kategori: this.modal.detail
           });
-          this.nama = '';
-          this.kode = '';
-          this.detail = '';
+          this.resetModal();
+        },
+        loadModal(data){
+          this.modal.id = data['.key'];
+          this.modal.nama = data.nama_kategori;
+          this.modal.kode = data.kode_kategori;
+          this.modal.detail = data.detail_kategori;
+        },
+        deleteKategori (key) {
+          this.$firebaseRefs.kategori.child(key).remove();
+          this.resetModal();
+        },
+        updateKategori(key) {
+          this.$firebaseRefs.kategori.child(key).set({
+            nama_kategori: this.modal.nama,
+            kode_kategori: this.modal.kode,
+            detail_kategori: this.modal.detail
+          });
+          this.resetModal();
         }
       }
     });
   </script>
+  <!-- end vue app -->
+
+
 
 </body>
 
