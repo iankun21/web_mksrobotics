@@ -2,7 +2,6 @@ const functions = require('firebase-functions');
 //include library expressjs setelah install di folder functions : npm i --save firebase-functions
 const express = require('express');
 
-
 //inisialisasi apps expressjs
 const app = express();
 
@@ -27,13 +26,17 @@ app.get('/admin/blank', function(req,res) {
   res.render('admin/blank');
 });
 
-
 app.get('/admin/kategori', function(req,res) {
-
   res.render('admin/kategori', {title:'Kategori'});
 });
 
+app.get('/admin/barang', function(req,res) {
+  res.render('admin/barang', {title:'Barang'});
+});
 
+app.get('/login', function(req,res) {
+  res.render('admin/login');
+});
 
 
 exports.apps = functions.https.onRequest(app);
