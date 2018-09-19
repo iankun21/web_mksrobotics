@@ -432,3 +432,7 @@
 [info] [hosting] Rewriting /css/font-face.css to local function apps
 [info] [hosting] Rewriting /login?mode=select to local function apps
 [info] [hosting] Rewriting /css/font-face.css to local function apps
+[info] [hosting] Rewriting /admin to local function apps
+[info] [hosting] Rewriting /admin/dashboard to local function apps
+[info] [hosting] Rewriting /admin/dashboard to local function apps
+[info] [hosting] Rewriting /admin/dashboard to local function apps
