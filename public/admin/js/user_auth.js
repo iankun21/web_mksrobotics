@@ -3,10 +3,11 @@ function cekLogin(){
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log(user);
-     //location.href = '/admin';
+
     } else {
     // // No user is signed in.
        console.log("Tidak ada user yang login");
+       location.href = '/login';
     }
   });
 }
