@@ -47,7 +47,14 @@ exports.apps = functions.https.onRequest(app);
 exports.newProfile = functions.auth.user().onCreate((user) => {
 
   return admin.database().ref("/users/" + user.uid).set({
-    email : user.email
+    nama_lengkap : '',
+    alamat : '',
+    no_hp : '',
+    facebook : '',
+    line : '',
+    instagram : '',
+    whatsapp : '',
+    roles : 'member'
   });
 
 });
