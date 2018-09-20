@@ -106,7 +106,7 @@
                 console.log("Login Gagal");
              }
             });
-          
+
             // User successfully signed in.
             // Return type determines whether we continue the redirect automatically
             // or whether we leave that to developer to handle.
@@ -138,6 +138,13 @@
       };
 
       ui.start('#firebaseui-auth-container', uiConfig);
+
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log(user);
+          location.href = '/admin';
+       }
+      });
 
 
 

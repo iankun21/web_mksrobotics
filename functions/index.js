@@ -41,16 +41,13 @@ app.get('/login', function(req,res) {
 });
 
 
-functions.auth.user().onCreate(event => {
-
-	const user = event.data;
-
-	var userObject = {
-		displayName : user.displayName,
-		email : user.email,
-		createdOn : user.metadata.createdAt
-	};
-	admin.database().ref('users/' + user.uid).set(userObject);
-});
-
 exports.apps = functions.https.onRequest(app);
+
+
+exports.newProfile = functions.auth.user().onCreate((user) => {
+
+  return admin.database().ref("/users/" + user.uid).set({
+    email : user.email
+  });
+
+});

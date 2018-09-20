@@ -1,42 +1,37 @@
-[debug] [2018-09-19T23:15:04.943Z] ----------------------------------------------------------------------
-[debug] [2018-09-19T23:15:04.945Z] Command:       /usr/bin/node /usr/bin/firebase serve
-[debug] [2018-09-19T23:15:04.945Z] CLI Version:   4.2.1
-[debug] [2018-09-19T23:15:04.945Z] Platform:      linux
-[debug] [2018-09-19T23:15:04.945Z] Node Version:  v8.12.0
-[debug] [2018-09-19T23:15:04.945Z] Time:          Thu Sep 20 2018 07:15:04 GMT+0800 (WITA)
-[debug] [2018-09-19T23:15:04.945Z] ----------------------------------------------------------------------
+[debug] [2018-09-20T00:50:34.673Z] ----------------------------------------------------------------------
+[debug] [2018-09-20T00:50:34.676Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2018-09-20T00:50:34.676Z] CLI Version:   4.2.1
+[debug] [2018-09-20T00:50:34.676Z] Platform:      linux
+[debug] [2018-09-20T00:50:34.676Z] Node Version:  v8.12.0
+[debug] [2018-09-20T00:50:34.676Z] Time:          Thu Sep 20 2018 08:50:34 GMT+0800 (WITA)
+[debug] [2018-09-20T00:50:34.676Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-09-19T23:15:04.953Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-09-19T23:15:04.953Z] > authorizing via signed-in user
-[debug] [2018-09-19T23:15:04.955Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-09-19T23:15:04.955Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
-
-[debug] [2018-09-19T23:15:05.175Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-19T23:15:05.181Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mksrobotics  
+[debug] [2018-09-20T00:50:34.685Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-20T00:50:34.685Z] > authorizing via signed-in user
+[debug] [2018-09-20T00:50:34.687Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mksrobotics  
  
-[debug] [2018-09-19T23:15:07.482Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-19T23:15:07.485Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mksrobotics  
+[debug] [2018-09-20T00:50:37.872Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-20T00:50:37.877Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mksrobotics  
  
-[debug] [2018-09-19T23:15:09.812Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-20T00:50:40.205Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/home/adnansurya/Documents/PROJECTS/web_mksrobotics'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2018-09-19T23:15:10.239Z] Fetching environment
-[debug] [2018-09-19T23:15:10.241Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418:getServerAppConfig  
+[debug] [2018-09-20T00:50:40.616Z] Fetching environment
+[debug] [2018-09-20T00:50:40.618Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418:getServerAppConfig  
  
-[debug] [2018-09-19T23:15:10.242Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418/clients/_:getWebAppConfig  
+[debug] [2018-09-20T00:50:40.618Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/236823766418/clients/_:getWebAppConfig  
  
-[debug] [2018-09-19T23:15:11.846Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-19T23:15:11.847Z] Starting @google-cloud/functions-emulator
-[debug] [2018-09-19T23:15:11.959Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-20T00:50:41.980Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-20T00:50:41.981Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-20T00:50:42.139Z] <<< HTTP RESPONSE 200
 [info] i  hosting[mksrobotics]: Serving hosting files from: public
 [info] ✔  hosting[mksrobotics]: Local server: http://localhost:5000
-[debug] [2018-09-19T23:15:12.881Z] Parsing function triggers
-[info] ✔  functions: apps: http://localhost:5001/mksrobotics/us-central1/apps
-[info] [hosting] Rewriting /admin/dashboard to local function apps
+[debug] [2018-09-20T00:50:43.012Z] Parsing function triggers
 [info] [hosting] Rewriting /login to local function apps
 [info] [hosting] Rewriting /css/font-face.css to local function apps
+[info] ✔  functions: apps: http://localhost:5001/mksrobotics/us-central1/apps
 [info] [hosting] Rewriting /login?mode=select to local function apps
 [info] [hosting] Rewriting /css/font-face.css to local function apps
 [info] [hosting] Rewriting /admin to local function apps
