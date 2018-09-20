@@ -1,24 +1,23 @@
 {
   /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
   "rules": {
+    ".read" : "root.child('users').child(auth.uid).child('roles').val() === 'owner'",
+    ".write" : "root.child('users').child(auth.uid).child('roles').val() === 'owner'",
     "users":{
       "$uid":{
-        ".read": "($uid === auth.uid) || (root.child('users').child(auth.uid).child('roles').val() === 'owner')",
-        ".write": "($uid === auth.uid) || (root.child('users').child(auth.uid).child('roles').val() === 'owner')",
+        ".read": "($uid === auth.uid)",
+        ".write": "($uid === auth.uid)",
 
         "roles":
         {
           ".read": true,
-          ".write": "($uid === auth.uid) && (!data.exists() || !newData.exists()) ||
-          (root.child('users').child(auth.uid).child('roles').val() === 'owner')"
+          ".write": "($uid === auth.uid) && (!data.exists() || !newData.exists())"
         }
       }
     },
     "kategori" :{
       ".read": true,
-      ".write":  "(root.child('users').child(auth.uid).child('roles').val() === 'owner') ||
-      (root.child('users').child(auth.uid).child('roles').val() === 'admin')"
-    },
-
+      ".write":  "root.child('users').child(auth.uid).child('roles').val() === 'admin'"
+    }
   }
 }

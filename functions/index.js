@@ -36,6 +36,10 @@ app.get('/admin/barang', function(req,res) {
   res.render('admin/barang', {title:'Barang'});
 });
 
+app.get('/admin/users', function(req,res) {
+  res.render('admin/users', {title:'Users'});
+});
+
 app.get('/login', function(req,res) {
   res.render('admin/login');
 });
@@ -44,10 +48,9 @@ app.get('/login', function(req,res) {
 exports.apps = functions.https.onRequest(app);
 
 
-exports.newProfile = functions.auth.user().onCreate((user) => {
-
+exports.newUser = functions.auth.user().onCreate((user) => {
   return admin.database().ref("/users/" + user.uid).set({
-    nama_lengkap : '',
+    email : user.email,
     alamat : '',
     no_hp : '',
     facebook : '',
@@ -57,4 +60,8 @@ exports.newProfile = functions.auth.user().onCreate((user) => {
     roles : 'member'
   });
 
+});
+
+exports.deleteUser = functions.auth.user().onDelete((user) => {
+  return admin.database().ref("/users/" + user.uid).remove();
 });
