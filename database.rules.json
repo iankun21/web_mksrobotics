@@ -3,13 +3,14 @@
   "rules": {
     "users":{
       "$uid":{
-        ".read": true,
+        ".read": "($uid === auth.uid) || (root.child('users').child(auth.uid).child('roles').val() === 'owner')",
         ".write": "($uid === auth.uid) || (root.child('users').child(auth.uid).child('roles').val() === 'owner')",
 
         "roles":
         {
           ".read": true,
-          ".write": "root.child('users').child(auth.uid).child('roles').val() === 'owner'"
+          ".write": "($uid === auth.uid) && (!data.exists() || !newData.exists()) ||
+          (root.child('users').child(auth.uid).child('roles').val() === 'owner')"
         }
       }
     },
