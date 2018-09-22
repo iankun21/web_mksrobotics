@@ -4,6 +4,7 @@
     ".read" : "root.child('users').child(auth.uid).child('roles').val() === 'owner'",
     ".write" : "root.child('users').child(auth.uid).child('roles').val() === 'owner'",
     "users":{
+      ".read" :  "root.child('users').child(auth.uid).child('roles').val() === 'admin'",
       "$uid":{
         ".read": "($uid === auth.uid)",
         ".write": "($uid === auth.uid)",

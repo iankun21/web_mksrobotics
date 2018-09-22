@@ -36,9 +36,9 @@ app.get('/admin/barang', function(req,res) {
   res.render('admin/barang', {title:'Barang'});
 });
 
-app.get('/admin/users', function(req,res) {
-  res.render('admin/users', {title:'Users'});
-});
+// app.get('/admin/users', function(req,res) {
+//   res.render('admin/users', {title:'Users'});
+// });
 
 app.get('/login', function(req,res) {
   res.render('admin/login');
