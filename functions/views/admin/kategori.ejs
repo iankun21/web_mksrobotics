@@ -44,7 +44,7 @@
             									<div class="card-header">
             										<i class="mr-2 fa fa-list"></i>
             										<strong class="card-title">Daftar Kategori</strong>
-                                <button @click="resetModal()"type="button" class="btn btn-sm btn-secondary mb-1 float-right" data-toggle="modal" data-target="#tambahModal">
+                                <button @click="resetModal()"type="button" class="btn btn-sm btn-success mb-1 float-right" data-toggle="modal" data-target="#tambahModal">
     								              <i class="fa fa-plus"></i>&nbsp; Tambah Baru
             										</button>
             									</div>
@@ -115,12 +115,12 @@
                           <textarea v-model="modal.detail" name="textarea-input" id="textarea-input" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
                         </div>
                         <div>
-                          <button @click="addKategori" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Confirm</button>
+                          <button @click="addKategori" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Konfirmasi</button>
                         </div>
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button  type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button  type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
 
                     </div>
                   </div>
@@ -152,12 +152,12 @@
                           <textarea v-model="modal.detail" name="textarea-input" id="textarea-input" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
                         </div>
                         <div>
-                          <button @click="updateKategori(modal.id)" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Confirm</button>
+                          <button @click="updateKategori(modal.id)" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Konfirmasi</button>
                         </div>
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button  type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <button  type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
 
                     </div>
                   </div>
@@ -201,8 +201,8 @@
                          </div>
   		              </div>
         						<div class="modal-footer">
-        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        							<button @click="deleteKategori(modal.id)" data-dismiss="modal" type="button" class="btn btn-primary">Confirm</button>
+        							<button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+        							<button @click="deleteKategori(modal.id)" data-dismiss="modal" type="button" class="btn btn-primary">Konfirmasi</button>
         						</div>
         					</div>
         				</div>
