@@ -1,18 +1,27 @@
+
+
 function cekLogin(){
+  var logged;
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      console.log(user);
+      //console.log(user);
       $(".logged-user-name").text(user.displayName);
       $(".logged-user-email").text(user.email);
+      logged = user;
+      console.log(logged);
 
 
     } else {
     // // No user is signed in.
-       console.log("Tidak ada user yang login");
+
        location.href = '/login';
+       logged = "Tidak ada";
     }
+
   });
+
+  return logged;
 }
 
 
