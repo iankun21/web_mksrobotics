@@ -36,6 +36,15 @@ app.get('/admin/barang', function(req,res) {
   res.render('admin/barang', {title:'Barang'});
 });
 
+// app.get('/admin/tes/:id', function(req,res) {
+//   return admin.database().ref("/users/" + req.params.id).once('value').then(function(snapshot) {
+//
+//   res.send(snapshot.val());
+//   // ...
+// });
+//
+// });
+//
 // app.get('/admin/users', function(req,res) {
 //   res.render('admin/users', {title:'Users'});
 // });
