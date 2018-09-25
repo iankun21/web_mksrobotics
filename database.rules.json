@@ -19,6 +19,10 @@
     "kategori" :{
       ".read": true,
       ".write":  "root.child('users').child(auth.uid).child('roles').val() === 'admin'"
+    },
+    "barang" :{
+      ".read": true,
+      ".write":  "root.child('users').child(auth.uid).child('roles').val() === 'admin'"
     }
   }
 }
