@@ -100,17 +100,7 @@
     </div>
 
   <%- include('global/js'); -%>
-  <script type="text/javascript">
-
-      const  db = firebase.database();
-
-      var app = new Vue({
-        el: '#app',
-        firebase: {
-          users: db.ref('users')
-        }
-      });
-  </script>
+  <script src="js/scripts/users.js"></script>
 
 </body>
 
