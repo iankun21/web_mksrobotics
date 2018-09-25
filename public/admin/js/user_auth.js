@@ -9,7 +9,7 @@ function cekLogin(){
       $(".logged-user-name").text(user.displayName);
       $(".logged-user-email").text(user.email);
       logged = user;
-      console.log(logged);
+    //  console.log(logged);
 
 
     } else {

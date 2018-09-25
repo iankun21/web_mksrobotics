@@ -50,6 +50,7 @@
             										</button>
             									</div>
             									<div class="card-body">
+
                                 <div class="table-responsive m-b-40">
                                     <table id="tableKategori" class="table table-borderless table-data3">
                                         <thead>
@@ -61,24 +62,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr v-for="data in kategori">
+                                            <tr v-for="data in barang">
                                               <td>
                                                   <div class="table-data__info">
-                                                      <h6>Nama</h6>
+                                                      <h6>{{data.nama_barang}}</h6>
                                                       <span>
-                                                          <a><p>Kode Kategori</p></a>
+                                                          <a><p>{{getNamaKategori(data.kategori)}}</p></a>
                                                       </span>
                                                   </div>
                                               </td>
                                               <td>
                                                   <div class="table-data__info">
-                                                      <h6>Jual : </h6>
+                                                      <h6>Jual : {{data.harga_jual}}</h6>
                                                       <span>
-                                                          <a><p>Modal : </p></a>
+                                                          <a><p>Modal : {{data.harga_dasar}}</p></a>
                                                       </span>
                                                   </div>
                                               </td>
-                                                <td>Stok + satuan</td>
+                                                <td>{{data.jumlah_stok}} {{data.satuan}}</td>
                                                 <td>
                                                   <button @click="loadModal(data)" type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#editModal">
                                                     <i class="fa fa-edit"></i>&nbsp; Edit
@@ -123,36 +124,44 @@
                         </div>
                         <div class="form-group">
                             <label for="kategori" class=" form-control-label">Kategori</label>
-                            <select id="kategori" class="form-control" name="kategori">
+                            <select id="kategori" class="form-control" name="kategori" v-model="modal.kategori">
+                              <option disabled value="">Pilih Salah Satu Kategori</option>
                               <option v-for="data in kategori" v-bind:value="data['.key']">
                                 {{data.nama_kategori}}
                               </option>
 
                             </select>
                         </div>
+                        <div class="row">
+                          <div class="form-group col-md-6">
+                              <label for="harga_dasar" class=" form-control-label">Harga Dasar</label>
+                              <input v-model="modal.harga_dasar" type="number" id="harga_dasar" class="form-control">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="harga_jual" class=" form-control-label">Harga Jual</label>
+                              <input v-model="modal.harga_jual" type="number" id="harga_jual"  class="form-control">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-md-6">
+                              <label for="stok" class=" form-control-label">Jumlah Stok</label>
+                              <input v-model="modal.stok"  type="number" id="stok"  class="form-control">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="satuan" class=" form-control-label">Satuan</label>
+                              <input v-model="modal.satuan" type="text" id="satuan" placeholder="Contoh : liter, pcs, 10 urat, dsb." class="form-control">
+                          </div>
+                        </div>
+
+
+
 
                         <div class="form-group">
-                            <label for="harga_dasar" class=" form-control-label">Harga Dasar</label>
-                            <input v-model="modal.harga_dasar" type="text" id="harga_dasar" placeholder="Masukkan Harga Dasar / Modal" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="harga_jual" class=" form-control-label">Harga Jual</label>
-                            <input v-model="modal.harga_jual" type="text" id="harga_jual" placeholder="Masukkan Harga Jual" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="stok" class=" form-control-label">Jumlah Stok</label>
-                            <input v-model="modal.stok"  type="number" id="stok" placeholder="Masukkan Jumlah Stok yang Tersedia" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="satuan" class=" form-control-label">Satuan</label>
-                            <input v-model="modal.satuan" type="text" id="satuan" placeholder="Masukkan Satuan Barang (pcs,pin,liter dsb.)" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for="detail" class="input-angka form-control-label">Detail Kategori</label>
-                          <textarea v-model="modal.detail" name="detail" id="detail" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
+                          <label for="detail" class="input-angka form-control-label">Detail Barang</label>
+                          <textarea v-model="modal.detail" name="detail" id="detail" rows="4" placeholder="Masukkan Detail Barang " class="form-control"></textarea>
                         </div>
                         <div>
-                          <button @click="addKategori" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Konfirmasi</button>
+                          <button @click="addBarang" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Konfirmasi</button>
                         </div>
                       </form>
                     </div>
@@ -182,7 +191,8 @@
                         </div>
                         <div class="form-group">
                             <label for="kategori" class=" form-control-label">Kategori</label>
-                            <select id="kategori" class="form-control" name="kategori">
+                            <select id="kategori" class="form-control" name="kategori" v-model="modal.kategori">
+                              <option disabled value="">Pilih Salah Satu Kategori</option>
                               <option v-for="data in kategori" v-bind:value="data['.key']">
                                 {{data.nama_kategori}}
                               </option>
@@ -275,6 +285,12 @@
 
   <!-- vue app -->
   <script src="js/scripts/barang.js"></script>
+  <script type="text/javascript">
+    function getNamaKategori(key){
+
+    }
+
+  </script>
 
 </body>
 

@@ -20,6 +20,17 @@ var app = new Vue({
     barang: db.ref('barang')
   },
   methods: {
+    
+    getNamaKategori(key){
+      var nama_kategori;
+
+      db.ref("/kategori/"+ key + "/nama_kategori").on("value", function(snapshot) {
+          nama_kategori = snapshot.val();
+      });
+      return nama_kategori;
+
+
+    },
     resetModal(){
       this.modal.id = '';
       this.modal.nama = '';
@@ -72,9 +83,9 @@ var app = new Vue({
   }
 });
 
-$('.input-angka').on('keypress', function(e){
-  return e.metaKey || // cmd/ctrl
-    e.which <= 0 || // arrow keys
-    e.which == 8 || // delete key
-    /[0-9]/.test(String.fromCharCode(e.which)); // numbers
-});
+
+function forceNumeric(){
+    var $input = $(this);
+    $input.val($input.val().replace(/[^\d]+/g,''));
+}
+$('body').on('propertychange input', 'input[type="number"]', forceNumeric);

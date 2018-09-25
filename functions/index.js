@@ -33,12 +33,7 @@ app.get('/admin/kategori', function(req,res) {
 });
 
 app.get('/admin/barang', function(req,res) {
-  var kategori;
-  admin.database().ref("/kategori/").once('value').then(function(snapshot) {
-
-    kategori = snapshot.val()
-  });
-  res.render('admin/barang', {title:'Barang', kategori:kategori});
+  res.render('admin/barang', {title:'Barang'});
 });
 
 
