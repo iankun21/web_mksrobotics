@@ -33,8 +33,14 @@ app.get('/admin/kategori', function(req,res) {
 });
 
 app.get('/admin/barang', function(req,res) {
-  res.render('admin/barang', {title:'Barang'});
+  var kategori;
+  admin.database().ref("/kategori/").once('value').then(function(snapshot) {
+
+    kategori = snapshot.val()
+  });
+  res.render('admin/barang', {title:'Barang', kategori:kategori});
 });
+
 
 // app.get('/admin/tes/:id', function(req,res) {
 //   return admin.database().ref("/users/" + req.params.id).once('value').then(function(snapshot) {
@@ -70,6 +76,7 @@ exports.newUser = functions.auth.user().onCreate((user) => {
   });
 
 });
+
 
 exports.deleteUser = functions.auth.user().onDelete((user) => {
   return admin.database().ref("/users/" + user.uid).remove();

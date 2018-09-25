@@ -55,7 +55,6 @@
                                         <thead>
                                             <tr>
                                                 <th>Barang</th>
-                                                <th>Kategori</th>
                                                 <th>Harga</th>
                                                 <th>Stok</th>
                                                 <th>Action</th>
@@ -67,11 +66,10 @@
                                                   <div class="table-data__info">
                                                       <h6>Nama</h6>
                                                       <span>
-                                                          <a><p>Kode Barang</p></a>
+                                                          <a><p>Kode Kategori</p></a>
                                                       </span>
                                                   </div>
                                               </td>
-                                              <td>Kategori</td>
                                               <td>
                                                   <div class="table-data__info">
                                                       <h6>Jual : </h6>
@@ -121,15 +119,37 @@
                       <form action="" method="post">
                         <div class="form-group">
                             <label for="nama" class=" form-control-label">Nama Barang</label>
-                            <input v-model="modal.nama" type="text" id="nama" placeholder="Masukkan Nama Kategori" class="form-control">
-                        </div>                        
-                        <div class="form-group">
-                            <label for="kode" class=" form-control-label">Kode Kategori</label>
-                            <input v-model="modal.kode" type="text" id="kode" placeholder="Masukkan Kode Kategori" class="form-control">
+                            <input v-model="modal.nama" type="text" id="nama" placeholder="Masukkan Nama Barang" class="form-control">
                         </div>
                         <div class="form-group">
-                          <label for="textarea-input" class=" form-control-label">Detail Kategori</label>
-                          <textarea v-model="modal.detail" name="textarea-input" id="textarea-input" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
+                            <label for="kategori" class=" form-control-label">Kategori</label>
+                            <select id="kategori" class="form-control" name="kategori">
+                              <option v-for="data in kategori" v-bind:value="data['.key']">
+                                {{data.nama_kategori}}
+                              </option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="harga_dasar" class=" form-control-label">Harga Dasar</label>
+                            <input v-model="modal.harga_dasar" type="text" id="harga_dasar" placeholder="Masukkan Harga Dasar / Modal" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="harga_jual" class=" form-control-label">Harga Jual</label>
+                            <input v-model="modal.harga_jual" type="text" id="harga_jual" placeholder="Masukkan Harga Jual" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="stok" class=" form-control-label">Jumlah Stok</label>
+                            <input v-model="modal.stok"  type="number" id="stok" placeholder="Masukkan Jumlah Stok yang Tersedia" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="satuan" class=" form-control-label">Satuan</label>
+                            <input v-model="modal.satuan" type="text" id="satuan" placeholder="Masukkan Satuan Barang (pcs,pin,liter dsb.)" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="detail" class="input-angka form-control-label">Detail Kategori</label>
+                          <textarea v-model="modal.detail" name="detail" id="detail" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
                         </div>
                         <div>
                           <button @click="addKategori" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Konfirmasi</button>
@@ -157,16 +177,37 @@
                     <div class="modal-body">
                       <form action="" method="post">
                         <div class="form-group">
-                            <label for="nama" class=" form-control-label">Nama Kategori</label>
-                            <input v-model="modal.nama" type="text" id="nama" placeholder="Masukkan Nama Kategori" class="form-control">
+                            <label for="nama" class=" form-control-label">Nama Barang</label>
+                            <input v-model="modal.nama" type="text" id="nama" placeholder="Masukkan Nama Barang" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="kode" class=" form-control-label">Kode Kategori</label>
-                            <input v-model="modal.kode" type="text" id="kode" placeholder="Masukkan Kode Kategori" class="form-control">
+                            <label for="kategori" class=" form-control-label">Kategori</label>
+                            <select id="kategori" class="form-control" name="kategori">
+                              <option v-for="data in kategori" v-bind:value="data['.key']">
+                                {{data.nama_kategori}}
+                              </option>
+
+                            </select>
                         </div>
                         <div class="form-group">
-                          <label for="textarea-input" class=" form-control-label">Detail Kategori</label>
-                          <textarea v-model="modal.detail" name="textarea-input" id="textarea-input" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
+                            <label for="harga_dasar" class=" form-control-label">Harga Dasar</label>
+                            <input v-model="modal.harga_dasar" type="text" id="harga_dasar" placeholder="Masukkan Harga Dasar / Modal" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="harga_jual" class=" form-control-label">Harga Jual</label>
+                            <input v-model="modal.harga_jual" type="text" id="harga_jual" placeholder="Masukkan Harga Jual" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="stok" class="input-angka form-control-label">Jumlah Stok</label>
+                            <input v-model="modal.stok"  type="number" id="stok" placeholder="Masukkan Jumlah Stok yang Tersedia" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="satuan" class=" form-control-label">Satuan</label>
+                            <input v-model="modal.satuan" type="text" id="satuan" placeholder="Masukkan Satuan Barang (pcs,pin,liter dsb.)" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="detail" class=" form-control-label">Detail Kategori</label>
+                          <textarea v-model="modal.detail" name="detail" id="detail" rows="4" placeholder="Masukkan Detail Kategori" class="form-control"></textarea>
                         </div>
                         <div>
                           <button @click="updateKategori(modal.id)" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Konfirmasi</button>
