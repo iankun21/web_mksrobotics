@@ -36,6 +36,10 @@ app.get('/admin/barang', function(req,res) {
   res.render('admin/barang', {title:'Barang'});
 });
 
+app.get('/admin/akun', function(req,res) {
+  res.render('admin/akun', {title:'Akun'});
+});
+
 
 // app.get('/admin/tes/:id', function(req,res) {
 //   return admin.database().ref("/users/" + req.params.id).once('value').then(function(snapshot) {

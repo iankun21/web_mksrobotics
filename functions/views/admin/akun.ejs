@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('global/meta'); -%>
+
+    <!-- Title Page-->
+    <title> <%= title %> </title>
+
+    <%- include('global/css'); -%>
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <%- include('global/navigation_mobile'); -%>
+
+        <!-- MENU SIDEBAR-->
+        <%- include('global/navigation'); -%>
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+
+                        <div class="header-wrap">
+                            <h3><i class="zmdi zmdi-account"></i>&nbsp; <%= title %> </h3>
+                          <%- include('global/header'); -%>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- END HEADER DESKTOP-->
+
+            <div id="app">
+              <div class="main-content">
+                  <div class="section__content section__content--p30">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="card">
+                              <div class="card-header">
+                                <i class="mr-2 fa fa-list"></i>
+                                <strong class="card-title">Data Personal</strong>
+                              </div>
+                              <div class="card-body">
+                                <form action="" method="post">
+                                  <div class="form-group">
+                                      <label for="nickname" class=" form-control-label">Nickname / Display Name</label>
+                                      <input v-model="modal.nama" type="text" id="nickname" placeholder="Masukkan Nama yang akan tampil secara default" class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="nama_lengkap" class=" form-control-label">Nama Lengkap</label>
+                                      <input v-model="modal.kode" type="text" id="nama_lengkap" placeholder="Masukkan Nama Lengkap sesuai kartu identitas" class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="alamat" class=" form-control-label">Alamat</label>
+                                    <textarea v-model="modal.detail" name="detail" id="alamat" rows="4" placeholder="Masukkan Alamat Anda secara lengkap" class="form-control"></textarea>
+                                  </div>
+                                  <div>
+                                    <button @click="addKategori" data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg">Simpan</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                          <%- include('global/footer'); -%>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  <%- include('global/js'); -%>
+
+</body>
+
+</html>
+<!-- end document-->

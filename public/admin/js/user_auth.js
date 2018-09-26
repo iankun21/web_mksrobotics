@@ -5,11 +5,12 @@ function cekLogin(){
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      //console.log(user);
+
       $(".logged-user-name").text(user.displayName);
       $(".logged-user-email").text(user.email);
-      logged = user;
-    //  console.log(logged);
+      logged = JSON.stringify(user);
+      loggedUser = user;
+
 
 
     } else {
@@ -17,11 +18,14 @@ function cekLogin(){
 
        location.href = '/login';
        logged = "Tidak ada";
+
     }
+    //console.log(logged);
+    console.log(loggedUser);
+    return logged;
 
   });
 
-  return logged;
 }
 
 
